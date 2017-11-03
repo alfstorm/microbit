@@ -1,2 +1,3 @@
 # microbit
-Microbit projects
+
+This repository contains various Micro:bit projects.

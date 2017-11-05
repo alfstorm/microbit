@@ -1,3 +1,15 @@
+////////////////////////////////////////
+//
+// Play the Imperial March
+//
+// Button A: Play first part
+// Button B: Play second part
+//
+// Note: That second parameter to basic.showLeds
+// is important, as the default is a 400ms wait
+//
+////////////////////////////////////////
+
 input.onButtonPressed(Button.A, () => {
     music.setTempo(35)
     basic.showLeds(`

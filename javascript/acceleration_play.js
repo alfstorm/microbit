@@ -48,6 +48,10 @@ basic.forever(() => {
     if (accelX_on || accelY_on) {
 	music.ringTone(accelX + accelY + baseFrequency)
     }
+    // stop sound with 1 ms rest
+    else {
+	music.rest(1)
+    }
 
     // Divide accelerator value in equal bins and traslate to led number.
     // Draw moving vertical line for X accelerator and horizontal line
@@ -68,6 +72,7 @@ basic.forever(() => {
                 break
             }
         }
+	// need this to keep index correct for Y part
         if (X == 5) {
             X--
         }
@@ -87,7 +92,8 @@ basic.forever(() => {
                 break
             }
         }
-        if (Y == 5) {
+        // need this to keep index correct for X part
+	if (Y == 5) {
             Y--
         }
     }
